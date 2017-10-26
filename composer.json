@@ -19,6 +19,11 @@
       "email": "mano@radebatz.net"
     }
   ],
+  "extra": {
+    "branch-alias": {
+      "dev-master": "3.x-dev"
+    }
+  },
   "require": {
     "php": ">=5.5",
     "evaneos/jwt": "^0.5.0",
