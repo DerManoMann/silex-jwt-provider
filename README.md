@@ -1,7 +1,7 @@
 # Silex JWT Provider
 Silex provider for JWT
 
-[![Build Status](https://secure.travis-ci.org/Evaneos/silex-jwt-provider.png?branch=master)](http://travis-ci.org/Evaneos/silex-jwt-provider)
+[![Build Status](https://travis-ci.org/DerManoMann/silex-jwt-provider.png?branch=master)](https://travis-ci.org/DerManoMann/silex-jwt-provider)
 
 ## Usage
 
