@@ -1,5 +1,5 @@
 {
-  "name": "evaneos/silex-jwt-provider",
+  "name": "radebatz/silex-jwt-provider",
   "description": "Silex JWT Provider",
   "authors": [
     {
@@ -13,6 +13,10 @@
     {
       "name": "Alexandre Dupuy",
       "email": "alexandred@evaneos.com"
+    },
+    {
+      "name": "Martin Rademacher",
+      "email": "mano@radebatz.net"
     }
   ],
   "require": {
