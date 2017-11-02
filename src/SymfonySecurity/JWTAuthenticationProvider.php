@@ -40,7 +40,7 @@ class JWTAuthenticationProvider implements AuthenticationProviderInterface
             throw new AuthenticationException(sprintf('%s works only for JWTToken', __CLASS__));
         }
 
-        if (!$token->getCredentials()) {
+        if (!$credentials = $token->getCredentials()) {
             throw new AuthenticationException('JWTToken must contain a token in order to authenticate.');
         }
 
@@ -48,6 +48,12 @@ class JWTAuthenticationProvider implements AuthenticationProviderInterface
             $user = $this->userBuilder->buildUserFromToken($token->getCredentials());
         } catch (JWTDecodeUnexpectedValueException $e) {
             throw new AuthenticationException('Failed to decode the JWT');
+        }
+
+        if ($user instanceof UserInterface) {
+            // rebuild token to inject roles
+            $token = new JWTToken($user->getRoles());
+            $token->setToken($credentials);
         }
 
         $token->setUser($user);
